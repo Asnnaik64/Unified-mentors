@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #50dcdf;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5vmin;
+  width: 60vmin;
+  height: 60vmin;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vmin;
+  font-weight: bold;
+  color: #b0413e;
+  background-color: #f5f598;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+#reset-btn,
+#new-btn,
+#play-computer-btn,
+#multiplayer-btn {
+  margin: 10px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#reset-btn:hover,
+#new-btn:hover,
+#play-computer-btn:hover,
+#multiplayer-btn:hover {
+  background-color: #048f1b;
+}
+
+#message {
+  font-size: 2rem;
+  color: #c40606;
+  background-color: #edf261;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.msg {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .game {
+      width: 80vmin;
+      height: 80vmin;
+  }
+
+  .box {
+      font-size: 4vmin;
+  }
+
+  #message {
+      font-size: 1.5rem;
+  }
+
+  #reset-btn,
+  #new-btn,
+  #play-computer-btn,
+  #multiplayer-btn {
+      font-size: 0.8rem;
+      padding: 10px 15px;
+  }
+}
